@@ -41,8 +41,9 @@ The object has the following sections :
 | SKU Name | Required | TBC |
 | SKU Tier | Required | TBC |
 | SKU Capacity | Required |TBC |
-| Gateway_ip_configuration_name | Required | TBC |
-| Gateway_ip_configuration_subnet_id | Required | TBC |
+| Gateway_ip_configuration
+                      name | Required | TBC |
+                 subnet_id | Required | TBC |
 | Frontend_port_name |Required |TBC |
 | Frontend_port_port |Required | TBC |
 
