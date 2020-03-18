@@ -41,11 +41,10 @@ The object has the following sections :
 | SKU Name | Required | TBC |
 | SKU Tier | Required | TBC |
 | SKU Capacity | Required |TBC |
-| Gateway_ip_configuration
-                      name | Required | TBC |
-                 subnet_id | Required | TBC |
-| Frontend_port_name |Required |TBC |
-| Frontend_port_port |Required | TBC |
+| Gateway_ip_configuration name | Required | TBC |
+| Gateway_ip_configuration subnet_id | Required | TBC |
+| Frontend_port name |Required |TBC |
+| Frontend_port port |Required | TBC |
 
 ### Application Object
 (Required) This object describes Appplication Settings for the deployed Application Gateway
