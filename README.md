@@ -3,7 +3,7 @@
 This module creates an Application Gateway with multiple application configurations
 
 
-    * 1 to many application seetings 
+    * 1 to many application settings 
     
 Reference the module to a specific version (recommended):
 
