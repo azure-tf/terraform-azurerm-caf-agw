@@ -12,7 +12,7 @@ Reference the module to a specific version (recommended):
 Link to terraform provider
          * Application Gateway https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html
          
-##Inputs 
+## Inputs 
 | Name | Type | Default | Description
 | -- | -- | -- | -- |
 |resource_group_name |string | None | Name of the resource group where to create the resource. Changing this foreces a new resoruce to be created. |
