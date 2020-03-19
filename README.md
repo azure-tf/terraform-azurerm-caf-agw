@@ -41,17 +41,20 @@ The object has the following sections :
 
 #### SKU Block
 | Name | Type | Description |
+| -- | -- | -- |
 | Name | Required | TBC |
 | Tier | Required | TBC |
 | Capacity | Required |TBC |
 
 #### Gateway_ip_configuration Block
 | Name | Type | Description |
+| -- | -- | -- |
 | name | Required | TBC |
 | subnet_id | Required | TBC |
 
 #### Frontend_port Block
 | Name | Type | Description |
+| -- | -- | -- |
 | name |Required |TBC |
 | port |Required | TBC |
 
@@ -62,24 +65,29 @@ The object has the following sections :
 
 #### frontend_ip_configuration Block
 | Name | Type | Description |
+| -- | -- | -- |
 |name | string | name of frontend ip |
 |subnet_id | string | name of subnet where frontend IP is being deployed |
 |public_ip_address_id | string | 
 
 #### backend_address_pool Block
 | Name | Type | Description |
+| -- | -- | -- |
 |name | string | backend pool name |
 
 #### backend_http_settings Block
 | Name | Type | Description |
+| -- | -- | -- |
 | name | string | backend http settings |
 | cookie_based_affinity | 
 
 #### http_listener Block
 | Name | Type | Description |
+| -- | -- | -- |
 
 #### request_routing_rule Block
 | Name | Type | Description |
+| -- | -- | -- |
 
 
 
