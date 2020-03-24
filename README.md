@@ -98,16 +98,38 @@ The object has the following sections :
 | pick_host_name_from_backend_address |Optional | Whether host header should be picked from the host name of the backend server. Defaults to false. |
 | authentication_certificate |Optional |  One or more authentication_certificate blocks. |
 |trusted_root_certificate_names| Optional | A list of trusted_root_certificate names. |
-|connection| Optional | A connection_draining block as defined below. |
+| connection_draining |Optional | to enable connection draining when enabled connection block is required
 
+#### connection block 
+| Name | Type | Description |
+| -- | -- | -- |
+| enabled | Required | If connection draining is enabled or not. |
+| draining_timeout_sec | Required | The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds. |
 
 #### http_listener Block
 | Name | Type | Description |
 | -- | -- | -- |
+| name | Required |The Name of the HTTP Listener.|
+| frontend_ip_configuration_name | Required | The Name of the Frontend IP Configuration used for this HTTP Listener. |
+|frontend_port_name|Required| The Name of the Frontend Port use for this HTTP Listener. |
+| host_name |Optional | The Hostname which should be used for this HTTP Listener.|
+| protocol|Required | The Protocol to use for this HTTP Listener. Possible values are Http and Https. |
+|require_sni  |Optional| Should Server Name Indication be Required? Defaults to false. |
+|ssl_certificate_name |Optional | The name of the associated SSL Certificate which should be used for this HTTP Listener. |
+|custom_error_configuration | Optional | One or more custom_error_configuration blocks as defined below. |
+
 
 #### request_routing_rule Block
 | Name | Type | Description |
 | -- | -- | -- |
+| name | Required | The Name of this Request Routing Rule. |
+| rule_type  | Required | The Type of Routing that should be used for this Rule. Possible values are Basic and PathBasedRouting. |
+| http_listener_name | Required | The Name of the HTTP Listener which should be used for this Routing Rule. |
+|backend_address_pool_name | Optional | The Name of the Backend Address Pool which should be used for this Routing Rule. Cannot be set if redirect_configuration_name is set. |
+|backend_http_settings_name| Optional |  The Name of the Backend HTTP Settings Collection which should be used for this Routing Rule. Cannot be set if redirect_configuration_name is set. |
+|redirect_configuration_name | Optional |  The Name of the Redirect Configuration which should be used for this Routing Rule. Cannot be set if either backend_address_pool_name or backend_http_settings_name is set. |
+|rewrite_rule_set_name | Optional | The Name of the Rewrite Rule Set which should be used for this Routing Rule. Only valid for v2 SKUs.|
+|url_path_map_name| Optional |The Name of the URL Path Map which should be associated with this Routing Rule. |
 
 
 
